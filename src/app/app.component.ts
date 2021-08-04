@@ -5,6 +5,12 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  name = 'pipesApp';
+  title: string = 'pipes app';
+  subheader: string = "subheader property"
+
+  upper(){
+   this.title =  this.title.toUpperCase()
+  }
 }
