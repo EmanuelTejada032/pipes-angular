@@ -2,10 +2,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
-//PrimeNG
-import { ButtonModule } from 'primeng/button';
-import { InputTextModule } from 'primeng/inputtext';
-import {CardModule} from 'primeng/card';
+//prime ng
+import { PrimeNgModule } from './prime-ng/prime-ng.module';
 
 import { AppComponent } from './app.component';
 
@@ -16,11 +14,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    ButtonModule,
-    InputTextModule,
-    CardModule
+    PrimeNgModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
