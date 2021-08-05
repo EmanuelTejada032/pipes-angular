@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 
 //PrimeNG
 import { ButtonModule } from 'primeng/button';
-import { InputTextModule } from 'primeng/inputtext';
 import {CardModule} from 'primeng/card';
+import {MenubarModule} from 'primeng/menubar';
+import { InputTextModule } from 'primeng/inputtext';
 
 
 
@@ -12,8 +13,9 @@ import {CardModule} from 'primeng/card';
   declarations: [],
   exports:[
     ButtonModule,
-    InputTextModule,
-    CardModule
+    CardModule,
+    MenubarModule,
+    InputTextModule
   ]
 })
 export class PrimeNgModule { }
