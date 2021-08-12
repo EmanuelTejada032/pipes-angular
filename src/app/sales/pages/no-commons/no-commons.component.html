@@ -7,13 +7,20 @@
 
 <div class="grid">
     <div class="col-6">
-        <p-fieldset legend="Header"  [toggleable]="true">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, at maxime consequuntur blanditiis totam eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellat soluta, ut voluptatibus tempora in. Libero accusantium adipisci unde numquam?
+        <p-fieldset legend="i18nSelect"  [toggleable]="true">
+            <p>
+                Something happened to {{name }}s house , thanks god {{gender | i18nSelect: matchGenderMap}} family is ok.
+            </p>
+            <button pButton type="button" label="Random" class="p-button-raised p-button-rounded p-button-info" (click)="selectRandomCustomer()"></button>
         </p-fieldset>
+
     </div>
     <div class="col-6">
-        <p-fieldset legend="Header"  [toggleable]="true">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, at maxime consequuntur blanditiis totam eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellat soluta, ut voluptatibus tempora in. Libero accusantium adipisci unde numquam?
+        <p-fieldset legend="i18nPlural"  [toggleable]="true">
+        <p>
+              {{customers.length | i18nPlural: displayMessageMap}}
+        </p>
+         <button pButton type="button" label="Delete" class="p-button-raised p-button-rounded p-button-danger" (click)="deleteCustomer()"></button>
         </p-fieldset>
     </div>
 </div>

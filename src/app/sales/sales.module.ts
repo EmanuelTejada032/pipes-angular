@@ -8,7 +8,10 @@ import { NumbersComponent } from './pages/numbers/numbers.component';
 import { NoCommonsComponent } from './pages/no-commons/no-commons.component';
 import { BasicsComponent } from './pages/basics/basics.component';
 import { SortComponent } from './pages/sort/sort.component';
+
+
 import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
 
 
 
@@ -22,6 +25,7 @@ import { CardModule } from 'primeng/card';
   imports: [
     CommonModule,
     PrimeNgModule,
+    ButtonModule,
     CardModule
   ],
   exports:[
