@@ -1,1 +1,39 @@
-<p>numbers works!</p>
+<div class="text-layout">
+    <h1>Decimal and percentages</h1>
+    <p>
+        Basic pipes - commonly included on common module
+    </p>
+</div>
+
+<div class="grid">
+    <div class="col-4">
+        <p-card header="Current Sales"
+                subheader="Decimal Pipe">
+                currentSales | number: '1.2-2' : 'fr'
+                <br>
+                <i class="pi pi-dollar"></i>
+                {{currentSales | number: '1.2-2' : 'fr'}}
+                <br>
+                currentSales | number: '1.2-2'
+                <br>
+                <i class="pi pi-dollar"></i>
+                {{currentSales | number: '1.2-2'}}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="Other Sales"
+                subheader="Currency pipe">
+                currentSales | currency
+                <br>
+                {{currentSales | currency}}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="Benefits"
+                subheader="percentages pipe">
+                earnings | percent: '1.2-2' earnings value on component: 0.48
+                <br>
+                {{earnings | percent: '1.2-2'}}
+        </p-card>
+    </div>
+</div>
