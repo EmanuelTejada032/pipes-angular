@@ -23,4 +23,46 @@
          <button pButton type="button" label="Delete" class="p-button-raised p-button-rounded p-button-danger" (click)="deleteCustomer()"></button>
         </p-fieldset>
     </div>
+    <div class="col-6">
+        <p-fieldset legend="Slice pipe"  [toggleable]="true">
+            <p>Friends | slice:0</p>
+            <pre>{{Friends | slice:0}}</pre>
+
+            <p>Friends | slice:0:2</p>
+            <pre>{{Friends | slice:0:2}}</pre>
+            
+            <p>Friends | slice:-4}}</p>
+            <pre>{{Friends | slice:-4}}</pre>
+        </p-fieldset>
+    </div>
+    <div class="col-6">
+        <p-fieldset legend="keyvalue pipe"  [toggleable]="true">
+         <ul>
+             <li *ngFor="let item of person | keyvalue">
+                 <b>{{item.key | titlecase }}</b>: {{item.value}}
+             </li>
+         </ul>
+
+        </p-fieldset>
+    </div>
+    <div class="col-6">
+        <p-fieldset legend="JSON pipe"  [toggleable]="true">
+            <p>Object</p>
+            <pre>{{person | json | titlecase}}</pre>
+            <p>Array</p>
+            <pre>{{Friends | json | titlecase}}</pre>
+            <p>Objects Array</p>
+            <pre>{{customers | json | titlecase}}</pre>
+        </p-fieldset>
+    </div>
+    <div class="col-6">
+        <p-fieldset legend="Async pipe"  [toggleable]="true">
+
+            <p *ngIf="!(myObservable | async)" >My observable</p>
+            <pre>{{myObservable | async }}</pre>
+
+            <p *ngIf="!(myPromise | async)">Promise pending</p>
+            <pre>{{myPromise | async }}</pre>
+        </p-fieldset>
+    </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, ComponentFactoryResolver, OnInit } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-no-commons',
@@ -11,7 +12,7 @@ export class NoCommonsComponent implements OnInit {
   name: string = "Emanuel"
   gender: string = "male"
 
-  // customers: string[] = ["Anthony", "Ramon", "Marcos"]
+   Friends: string[] = ["Anthony", "Ramon", "Marcos", "Randorf", "Saint", "Kazutora"]
    customers: any[] = [{name:"Anthony", gender: "male"},{name:"Ana", gender: "female"}, {name:"Ramon", gender: "male"},{name:"Maria", gender: "female"}]
 
   // pass the map options to the i18nselect 
@@ -24,6 +25,14 @@ export class NoCommonsComponent implements OnInit {
     "=0": " No customers waiting for service", // condition: messagetodisplay
     "=1": "1 customer is waiting for service",
     "other": " # customers are waiting for service"
+  }
+
+  person = {
+    name: "Emanuel Tejada",
+    address: "E #35",
+    job: "programmer",
+    age:25,
+    salary: 10000
   }
 
   constructor() { }
@@ -39,5 +48,14 @@ export class NoCommonsComponent implements OnInit {
     console.log("Deleted customer", this.customers.pop() )
     console.log("Customer list", this.customers)
   }
+
+  myObservable = interval(2000);
+
+  myPromise = new Promise( (resolve, reject) => {
+    setTimeout(() => {
+      resolve("Here is your api data")
+    }, 3000);
+  })
+
 
 }
