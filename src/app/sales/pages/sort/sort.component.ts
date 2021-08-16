@@ -11,6 +11,8 @@ export class SortComponent implements OnInit {
   isUppercase: boolean = true;
   name: string = "Emanuel Tejada Coste"
 
+  sortBy: string = ""
+
   heroes: Heroe[] = [
     {
       name: "Supermamn",
@@ -47,6 +49,10 @@ export class SortComponent implements OnInit {
   toggleCase(){
     console.log(this.isUppercase)
     this.isUppercase = !this.isUppercase
+  }
+
+  sortByValue( value: string){
+    this.sortBy = value;
   }
 
 }

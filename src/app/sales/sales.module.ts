@@ -13,6 +13,7 @@ import { MyUppercasePipe } from './pipes/myuppercase.pipe';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { CanFlyPipe } from './pipes/canfly.pipe';
+import { SortPipe } from './pipes/sort.pipe';
 
 
 
@@ -24,7 +25,8 @@ import { CanFlyPipe } from './pipes/canfly.pipe';
     BasicsComponent,
     SortComponent,
     CanFlyPipe,
-    MyUppercasePipe
+    MyUppercasePipe,
+    SortPipe
   ],
   imports: [
     CommonModule,

@@ -31,24 +31,27 @@
         <button pButton
                 icon="pi pi-sort"
                 label="By name"
-                class="m-1"></button>
+                class="m-1"
+                (click)="sortByValue('name')"></button>
 
         <button pButton
                 icon="pi pi-sort"
-                label="Values"
-                class="m-1"></button>
+                label="Can fly"
+                class="m-1"
+                (click)="sortByValue('canFly')"></button>
 
         <button pButton
                 icon="pi pi-sort"
                 label="By color"
-                class="m-1"></button>
+                class="m-1"
+                (click)="sortByValue('color')"></button>
         
     </div>
 </p-toolbar>
 
 <div class="grid">
     <div class="col">
-            <p-table [value]="heroes">
+            <p-table [value]="heroes | sort: sortBy">
                 <ng-template pTemplate="header">
                     <tr>
                         <th>Name</th>
