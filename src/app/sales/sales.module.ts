@@ -8,10 +8,12 @@ import { NumbersComponent } from './pages/numbers/numbers.component';
 import { NoCommonsComponent } from './pages/no-commons/no-commons.component';
 import { BasicsComponent } from './pages/basics/basics.component';
 import { SortComponent } from './pages/sort/sort.component';
-
+import { MyUppercasePipe } from './pipes/myuppercase.pipe';
 
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
+import { CanFlyPipe } from './pipes/canfly.pipe';
+
 
 
 
@@ -20,7 +22,9 @@ import { ButtonModule } from 'primeng/button';
     NumbersComponent,
     NoCommonsComponent,
     BasicsComponent,
-    SortComponent
+    SortComponent,
+    CanFlyPipe,
+    MyUppercasePipe
   ],
   imports: [
     CommonModule,
