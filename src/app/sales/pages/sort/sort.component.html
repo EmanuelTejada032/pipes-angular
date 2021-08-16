@@ -69,5 +69,25 @@
             </p-table>
     </div>
 </div>
+<div class="grid">
+    <div class="col">
+            <p-table [value]="heroes | slice:0">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th pSortableColumn="name">Name <p-sortIcon field="name"></p-sortIcon></th>
+                        <th pSortableColumn="canFly">Can Fly <p-sortIcon field="canFly"></p-sortIcon></th>
+                        <th pSortableColumn="primaryColor">Primary Color <p-sortIcon field="primaryColor"></p-sortIcon></th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-heroe>
+                    <tr>
+                        <td>{{heroe.name}}</td>
+                        <td>{{heroe.canFly | canfly}}</td>
+                        <td>{{heroe.primaryColor }}</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+    </div>
+</div>
 
 
